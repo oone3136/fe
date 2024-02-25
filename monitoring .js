@@ -13,8 +13,8 @@ async function performSearch() {
     try {
         const searchUrl = `http://localhost:8080/api/monitoring/byNama`;
         const requestBody = {
-            searchType: searchType,
-            searchInput: searchInput
+            nik: searchType,
+            nama_lengkap: searchInput
         };
 
         const response = await fetch(searchUrl, {
@@ -31,7 +31,7 @@ async function performSearch() {
         console.log(data);
 
         const searchResultsDiv = document.getElementById('searchResults');
-        searchResultsDiv.innerHTML = `<p>Hasil Pencarian untuk ${searchType}: ${searchInput}</p>`;
+        searchResultsDiv.innerHTML = `<p>Hasil Pencarian untuk : ${searchType} ${searchInput}</p>`;
         displaySearchResults(data); 
 
     } catch (error) {
@@ -170,9 +170,6 @@ function displaySearchResults(data, searchType) {
         `;
         tableBody.appendChild(row);
     });
-
-    const searchResultsDiv = document.getElementById('searchResults');
-    searchResultsDiv.innerHTML = `<p>Hasil Pencarian untuk ${searchType}</p>`;
 }
 
 async function addData() {
@@ -237,23 +234,24 @@ async function detailData(id) {
             method: 'GET',
         });
         
+        
         if (!response.ok) {
             throw new Error('Failed to fetch data');
         }
 
         const data = await response.json();
-
-        document.getElementById('editId').value = data.id;
-        document.getElementById('editNamaLengkap').value = data.namaLengkap;
-        document.getElementById('editJenisKelamin').value = data.jenisKelamin;
-        document.getElementById('editTanggalLahir').value = data.tanggalLahir;
-        document.getElementById('editAlamat').value = data.alamat;
-        document.getElementById('editNegara').value = data.negara;
-        $('#editFormModal').modal('show');
+        document.getElementById('detailId').textContent = data.id;
+        document.getElementById('detailNamaLengkap').textContent = data.namaLengkap;
+        document.getElementById('detailJenisKelamin').textContent = data.jenisKelamin;
+        document.getElementById('detailTanggalLahir').textContent = data.tanggalLahir;
+        document.getElementById('detailAlamat').textContent = data.alamat;
+        document.getElementById('detailNegara').textContent = data.negara;
+        $('#detailModal').modal('show');
     } catch (error) {
         console.error('Error:', error);
     }
 }
+
 
 
 

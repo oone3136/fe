@@ -38,6 +38,7 @@
         add
     </button>
 
+    
     <div class="modal fade" id="createFormModal" tabindex="-1" role="dialog" aria-labelledby="createFormModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -130,9 +131,35 @@
             </div>
         </div>
     </div>
+    
+<div id="detailModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Detail Data</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            
+            <div class="modal-body">
+                <p>NIK: <span id="detailId"></span></p>
+                <p>Nama Lengkap: <span id="detailNamaLengkap"></span></p>
+                <p>Jenis Kelamin: <span id="detailJenisKelamin"></span></p>
+                <p>Tanggal Lahir: <span id="detailTanggalLahir"></span></p>
+                <p>Alamat: <span id="detailAlamat"></span></p>
+                <p>Negara: <span id="detailNegara"></span></p>
+            </div>
+            
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
     <script src="monitoring .js"></script>
     <script>
+        
         document.addEventListener("DOMContentLoaded", function () {
             displayData();
         });
