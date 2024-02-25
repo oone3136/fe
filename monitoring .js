@@ -31,7 +31,7 @@ async function performSearch() {
         console.log(data);
 
         const searchResultsDiv = document.getElementById('searchResults');
-        searchResultsDiv.innerHTML = `<p>Hasil Pencarian untuk : ${searchType} ${searchInput}</p>`;
+        searchResultsDiv.innerHTML = `<p class="pp">Hasil Pencarian untuk : ${searchType} ${searchInput}</p>`;
         displaySearchResults(data); 
 
     } catch (error) {
