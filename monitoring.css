@@ -31,28 +31,56 @@ h2{
 }
 #add{
     position: absolute;
-    margin-top: -30px;
-    margin-left: 75%;
+    margin-bottom: 0%;
+    margin-left: 74%;
     width: 150px;
-    height: 50px;
+    height: 40px;
     background-color: rgb(42, 42, 248);
     color: white;
     border-radius: 10px;
 }
 #srch{
-    margin-top: -20%;
-    margin-left: 89%;
+    position:absolute;
+    margin-top: 17px;
+    margin-left: 86%;
     width: 150px;
-    height: 50px;
+    height: 40px;
     background-color: rgb(42, 42, 248);
     color: white;
     border-radius: 10px;
+    
 }
 .table{
-    margin-top: 50px;
+    margin-top: 60px;
     border: 2px solid black;
+  
+}
+.table th{
+    padding: 0vh;
 }
 th{
-    border: 2px solid black;
+    text-align: center;
+    border: 1px solid black;
     background-color: rgb(132, 132, 255);
+    height: 30px;
+}
+th:nth-child(6) {
+    width: 450px;
+  }
+.btn {
+    width: 50px;
+    height: 25px;
+    font-size: 11px; 
+}
+
+.edit-btn {
+    background-color: orange;
+}
+
+.detail-btn {
+    background-color: lightblue;
+}
+
+.delete-btn {
+    background-color: red;
 }

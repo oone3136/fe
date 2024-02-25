@@ -1,8 +1,8 @@
 function clearForm() {
     document.getElementById('id').value = '';
     document.getElementById('namaLengkap').value = '';
-    document.getElementById('jenisKelamin').value = '';
     document.getElementById('tanggalLahir').value = '';
+    document.getElementById('alamat').value = '';
     document.getElementById('negara').value = '';
 }
 
@@ -135,9 +135,9 @@ async function displayData() {
                 <td>${data.alamat}</td>
                 <td>${data.negara}</td>
                 <td>
-                    <button onclick="editData(${data.id})" class="btn btn-warning">Edit</button>
-                    <button onclick="detailData(${data.id})" class="btn btn-info">Detail</button> 
-                    <button onclick="deleteData(${data.id})" class="btn btn-danger">Hapus</button>
+                    <button onclick="editData(${data.id})" class="btn btn-warning" >Edit</button>
+                    <button onclick="detailData(${data.id})" class="btn btn-info" >Detail</button> 
+                    <button onclick="deleteData(${data.id})" class="btn btn-danger" >Hapus</button>
                 </td>
             `;
             tableBody.appendChild(row);
@@ -163,12 +163,13 @@ function displaySearchResults(data, searchType) {
             <td>${result.alamat}</td>
             <td>${result.negara}</td>
             <td>
-                <button onclick="editData(${result.id})" class="btn btn-warning">Edit</button>
-                <button onclick="detailData(${data.id})" class="btn btn-info">Detail</button> 
-                <button onclick="deleteData(${result.id})" class="btn btn-danger">Hapus</button>
+                <button onclick="editData(${result.id})" class="btn btn-warning" >Edit</button>
+                <button onclick="detailData(${data.id})" class="btn btn-info" >Detail</button> 
+                <button onclick="deleteData(${result.id})" class="btn btn-danger" >Hapus</button>
             </td>
         `;
         tableBody.appendChild(row);
+        
     });
 }
 
